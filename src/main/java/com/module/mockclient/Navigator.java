@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Navigator {
     HttpClientUtil httpClient = new HttpClientUtil();
 
-    @RequestMapping("/callMethod")
     public String callMethod(){
         return httpClient.getResult();
     }
@@ -22,4 +21,6 @@ public class Navigator {
         } catch (Exception e){e.printStackTrace();}
         return result;
     }
+
+    public String nestedCall(){return httpClient.getNestedCall();}
 }

@@ -32,6 +32,10 @@ public class HttpClientUtil {
         return "local result";
     }
 
+    public String getNestedCall() {
+        return getResult();
+    }
+
     public String dispatch(String url) {
         String result = null;
 
